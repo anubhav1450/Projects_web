@@ -1,7 +1,9 @@
 
-body{
-
-}.header{
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+.header{
 height: 55px;
   display: flex;
   flex-direction: row;
@@ -10,6 +12,7 @@ height: 55px;
   left: 0;
   right: 0;
   border: none;
+  z-index: 10;
   margin-bottom: 50px;
   background-color: rgb(244, 244, 244);
   border-bottom-width: 1px;
@@ -57,24 +60,42 @@ height: 55px;
 .page1{
   display: flex;
   margin-top: 65px;
+height: 750px;
+
 }
 .section1{
-height: 800px;
+
+ position: relative;
+  padding-top: 60px;
+  /* min-height: 200px; */
 width: 300px;
+
 background-color: rgb(244, 244, 244);
-margin-right: 10px;
+ 
+}
+.image3 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+   z-index: 1; /* kam rakh */
 }
 .section2{
+  
 text-align: center;
+
   padding: 60px 20px;
   margin-left: 10px;
   width: 800px;
+
   background-color: rgb(244, 244, 244);
 }
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
+.hbot-image{
+  height: 300px;
+  width: 600px;
 }
+
 
 
 .tagline {
@@ -107,7 +128,8 @@ body {
 }
 
 .button-group {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  
 }
 
 .btn {
@@ -142,3 +164,6 @@ width: 300px;
 background-color: rgb(244, 244, 244);
 margin-left: 10px;
 }
+
+
+
