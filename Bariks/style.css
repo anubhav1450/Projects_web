@@ -91,10 +91,42 @@ text-align: center;
 
   background-color: rgb(244, 244, 244);
 }
-.hbot-image{
+
+.machine-wrapper{
+ position: relative;
+ width: 700px;
+ margin-left: 40px;
+
+}
+.machine-wrapper::before {
+  content: "";
+  position: absolute;
+  bottom: 0; /* thoda neeche push for spread */
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;   /* increased width */
+height: 200px;   /* increased height */
+  background: radial-gradient(
+    circle,
+    rgba(46, 58, 140, 0.3) 0%,
+    rgba(142, 68, 173, 0.3) 20%,
+    rgba(230, 126, 34, 0.25) 30%,
+    rgba(232, 67, 147, 0.2) 40%,
+    rgba(255, 255, 255, 0) 50%
+  );
+  filter: blur(50px); /* softer spread */
+  z-index: 0;
+}
+
+
+.hbot-image {
   height: 300px;
   width: 600px;
+  z-index: 1;
+  position: relative; /* 👉 Yeh zaroori hai */
 }
+
 
 
 
@@ -159,11 +191,71 @@ text-align: center;
   margin-top: 20px;
 }
 .section3{
-  height: 800px;
+
 width: 300px;
 background-color: rgb(244, 244, 244);
 margin-left: 10px;
+position:relative
+
+}
+.image2{
+ 
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  width: 150px;
+  height:40px;
+  z-index: 1; /* kam rakh */
+ 
+}
+.horizontal-bar{
+  display: flex;
+  justify-content: space-evenly;
+  height: 50px;
+  align-items: center;
+  background-color:rgb(244, 244, 244);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(228, 228, 228);
+  border-radius:50px ;
+  margin-top: 10px;
+}
+.page2{
+  display: flex;
+  margin-top: 10px;
+  padding-left: 80px;
+  padding-top: 40px;
+  background-color:rgb(244, 244, 244);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(228, 228, 228);
+}
+.text-part{
+width: 60%;
+
 }
 
+.About{
+  font-size: 15px;
+  color: #333;
+
+  margin-bottom: 15px;
+  color:#e84393 ;
+}
+.gradient-text2 {
+  margin-top: 5px;
+  display: inline-block;
+  background: linear-gradient(to right, #2e3a8c, #8e44ad, #e67e22, #e84393);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 50px;
+  font-weight: bold;
+}
+.image-part{
+  margin-left: 10px;
+width: 700px;
+
+
+}
 
 
