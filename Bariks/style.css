@@ -3,10 +3,9 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
-.header{
+header{
 height: 55px;
   display: flex;
-  flex-direction: row;
   position: fixed;
   top: 0;
   left: 0;
@@ -383,10 +382,32 @@ height: 400px;   /* increased height */
 
 
 .specification {
-
-  height: 200px;
-  margin-top: 20px;
+ display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 40px 80px;
 }
+.feature-box {
+  width: 150px;
+  text-align: center;
+}
+
+.feature-box img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(to right, #2e3a8c, #e84393);
+  padding: 10px;
+}
+
+.feature-box p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
 .demo{
   align-items: center;
     background-color: white;
