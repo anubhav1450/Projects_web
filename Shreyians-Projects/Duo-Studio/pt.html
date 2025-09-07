@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sword Slash Transition</title>
+<style>
+  html,body {
+    margin:0; padding:0; height:100%; overflow:hidden;
+    font-family: Inter, sans-serif;
+  }
+  /* First page (before slash) */
+  .page1 {
+    position:absolute; inset:0;
+    display:flex; align-items:center; justify-content:center;
+    background:#0f172a; color:white; font-size:2rem;
+    z-index:1;
+  }
+  /* Second page (after slash) */
+  .page2 {
+    position:absolute; inset:0;
+    display:flex; align-items:center; justify-content:center;
+    background:linear-gradient(120deg,#0ea5a4,#7c3aed);
+    color:white; font-size:3rem; font-weight:bold;
+    opacity:0; z-index:0;
+  }
+
+  /* Overlay mask for slice */
+  .overlay {
+    position:absolute; inset:0;
+    background:#0f172a;
+    z-index:2;
+    clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+    transition: clip-path 1s ease-in-out;
+  }
+
+  .cut {
+    clip-path: polygon(0 0,100% 0,60% 100%,0 100%);
+  }
+  .hidden {opacity:0; transition:opacity 0.6s ease 0.8s;}
+  .show {opacity:1; transition:opacity 0.6s ease 0.8s;}
+</style>
+</head>
+<body>
+  <div class="page1">Prepare to be slashed ⚔️</div>
+  <div class="overlay"></div>
+  <div class="page2">Anubhav Kulshreshtha</div>
+
+<script>
+  setTimeout(()=>{
+    document.querySelector('.overlay').classList.add('cut'); // slice overlay
+    document.querySelector('.page1').classList.add('hidden'); // hide first page
+    document.querySelector('.page2').classList.add('show');   // show second page
+  },2000);
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+body{
+    margin-top: 0;
+    
+    background-color: black;
+    color: white;
+
+}
+.header{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section1{
+
+    width: 100px;
+}
+.section2{
+    width: 500px;
+
+    justify-content: space-evenly;
+}
